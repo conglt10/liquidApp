@@ -1,0 +1,8 @@
+@import './App.module.scss';
+
+.container {
+  margin: auto;
+  @include desktop {
+    width: 960px;
+  }
+}

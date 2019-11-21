@@ -33,51 +33,6 @@ body {
   position: relative;
 }
 
-.scores {
-  text-align: right;
-  margin-bottom: 10px;
-}
-
-.scores span {
-  position: relative;
-  display: inline-block;
-  background: #bbada0;
-  padding: 15px 25px;
-  font-size: 20px;
-  height: 25px;
-  line-height: 47px;
-  font-weight: bold;
-  border-radius: 3px;
-  color: white;
-  margin-top: 4px;
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 0px;
-}
-
-.scores .score {
-  margin-right: 10px;
-}
-
-.newGame {
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-.newGame span {
-  display: inline-block;
-  background: #8f7a66;
-  border-radius: 3px;
-  padding: 0 20px;
-  text-decoration: none;
-  color: #f9f6f2;
-  height: 40px;
-  line-height: 42px;
-  text-align: center;
-  cursor: pointer;
-  width: 30%;
-}
-
 .board .cell,
 .tile {
   user-select: none;

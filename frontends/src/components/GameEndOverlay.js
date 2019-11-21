@@ -13,8 +13,8 @@ let GameEndOverlay = ({ board, onRestart }) => {
   return (
     <div className='overlay'>
       <p className='message'>{contents}</p>
-      <button className='tryAgain' onClick={onRestart} onTouchEnd={onRestart}>
-        Try again
+      <button className='saveGame' onClick={onRestart}>
+        Save Game
       </button>
     </div>
   );
