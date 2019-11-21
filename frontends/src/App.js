@@ -101,6 +101,7 @@ export default class App extends Component {
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyDown.bind(this));
     this.isComponentMounted = true;
+    this.attemptCookieLogin();
   }
 
   componentWillUnmount() {
@@ -159,19 +160,17 @@ export default class App extends Component {
     window.location.reload();
   };
 
-  // attemptCookieLogin = async () => {
-  //   this.setState({ isAddingAccount: true });
-  //   let account = localStorage.getItem('user_account');
-  //   let key = localStorage.getItem('user_key');
+  attemptCookieLogin = async () => {
+    let account = localStorage.getItem('user_account');
+    let key = localStorage.getItem('user_key');
 
-  //   if (account != null && key != null) {
-  //     this.setState({ isLoggedIn: true, form: { username: account } });
-  //     await ApiService.fetchAccounts(account, this);
-  //     await this.fetchData(this.state.eosAddressArr);
-  //   }
-  //   this.setState({ isAddingAccount: false });
-  //   return;
-  // };
+    if (account != null && key != null) {
+      this.setState({ isLoggedIn: true, form: { username: account } });
+      await ApiService.fetchAccounts(account, this);
+    }
+
+    return;
+  };
 
   // fetchData = async (eosAddressArr) => {
   //   if (this.state.eosAddressArr) await fetchAllData(eosAddressArr, this);
